@@ -1,4 +1,4 @@
-package cc.gozal.slack;
+package jp.ekuro.slack;
 
 import java.io.BufferedReader;
 import java.io.IOException;
