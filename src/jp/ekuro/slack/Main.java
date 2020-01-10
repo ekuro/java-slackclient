@@ -27,7 +27,12 @@ public class Main {
             conn.setRequestProperty(CONTENT_TYPE, APPLICATION_JSON);
             conn.setDoOutput(true);
 
-            String input = String.format("{\"channel\": \"%s\",\"command\":\"%s\",\"text\":\"%s\"}", args[1], args[2], args[3]);
+            String input;
+            if (args.length == 3){
+                input = String.format("{\"channel\": \"%s\",\"command\":\"%s\"}", args[1], args[2]);
+            } else {
+                input = String.format("{\"channel\": \"%s\",\"command\":\"%s\",\"text\":\"%s\"}", args[1], args[2], (args.length == 4)? args[3] : null);
+            }
 
             OutputStream os = conn.getOutputStream();
             os.write(input.getBytes());
