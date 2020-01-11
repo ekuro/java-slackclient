@@ -1,4 +1,6 @@
 ## Java slack command client
+This is Java slack client sending command to slack app by using legacy token.  
+Slack don't recommend this option.
 
 ### Quick Start
 #### Compile
@@ -13,4 +15,7 @@ $ jar cvfm slack.jar src/META-INF/MANIFEST.MF -C out .
 ```
 $ java -jar slack.jar [LEGACY_SLACK_API_TOKEN] [CHANNEL_ID] [COMMAND] [TEXT]
 ```
+
+*Slack don't recommend to use this token.*  
+Legacy token is [here](https://api.slack.com/custom-integrations/legacy-tokens).  
 
